@@ -5,6 +5,7 @@ import arc.util.*;
 import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
+import newuniverse.content.NewUniversePlanets;
 
 public class NewUniverseMod extends Mod{
 
@@ -15,6 +16,7 @@ public class NewUniverseMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading New Universe planets...");
+        NewUniversePlanets.load();
     }
 
 }
