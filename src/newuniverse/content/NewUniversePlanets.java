@@ -22,7 +22,7 @@ public class NewUniversePlanets {
 
                 @Override
                 public Color getColor(Vec3 position) {
-                    return Color.grays(Simplex.noise3d(32405, .7, .25d, 1.2d, Vec3.X.x, Vec3.Y.y, Vec3.Z.z));
+                    return Simplex.noise3d(32405, .7, .25d, 1.2d, Vec3.X.x, Vec3.Y.y, Vec3.Z.z) < 0.5 ? Color.gray : Color.lightGray;
                 }
             };
             meshLoader = () -> new HexMesh(this, 3);
@@ -31,7 +31,7 @@ public class NewUniversePlanets {
             defaultEnv = Env.any;
             accessible = false;
             visible = true;
-            orbitRadius = 1.7f;
+            orbitRadius = 3f;
         }};
     }
 }
